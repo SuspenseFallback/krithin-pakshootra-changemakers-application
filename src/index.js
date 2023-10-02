@@ -1,13 +1,36 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import React from "react";
+import ReactDOM from "react-dom/client";
+import "./index.css";
+import reportWebVitals from "./reportWebVitals";
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
+import { gsap } from "gsap";
+import { PixiPlugin } from "gsap/dist/PixiPlugin.js";
+import { MotionPathPlugin } from "gsap/dist/MotionPathPlugin.js";
+import { ScrollTrigger } from "gsap/dist/ScrollTrigger.js";
+
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import Navbar from "./components/Navbar/Navbar";
+import Home from "./pages/Home/Home";
+
+gsap.registerPlugin(PixiPlugin, MotionPathPlugin, ScrollTrigger);
+
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <Navbar />,
+    children: [
+      {
+        path: "/",
+        element: <Home />,
+      },
+    ],
+  },
+]);
+
+const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <App />
+    <RouterProvider router={router} />
   </React.StrictMode>
 );
 
