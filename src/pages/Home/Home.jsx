@@ -1,27 +1,75 @@
-import React from "react";
+import React, { useLayoutEffect, useRef } from "react";
 import "./Home.css";
+import gsap from "gsap";
+import scrollSvg from "scroll-svg";
 
 const Home = () => {
+  const home = useRef(null);
+
+  useLayoutEffect(() => {
+    const element = home.current;
+
+    const ctx = gsap.context(() => {
+      gsap.fromTo(
+        element.querySelector(".page-1 .header"),
+        {
+          y: -30,
+          opacity: 0,
+        },
+        {
+          y: 0,
+          opacity: 1,
+          duration: 1.5,
+          scrollTrigger: {
+            trigger: element.querySelector(".page-1 .header"),
+            start: "-20%",
+            end: "bottom 50%",
+          },
+        }
+      );
+
+      gsap.fromTo(
+        element.querySelector(".page-1 .header"),
+        {},
+        {
+          duration: 1.5,
+          scrollTrigger: {
+            trigger: element.querySelector(".page-1 .header"),
+            start: "-20%",
+            end: "bottom 50%",
+            pin: true,
+            markers: true,
+          },
+        }
+      );
+    }, element);
+
+    return () => ctx.revert();
+  }, []);
+
+  useLayoutEffect(() => {
+    const element = document.querySelector("#react-icon-path-1");
+
+    const svg = scrollSvg(element);
+  }, []);
+
   return (
     <>
-      <main className="home-page">
+      <main className="home-page" ref={home}>
         <div className="page page-1">
-          <div className="left-side">
-            <h1 className="header">
-              Hello, this is <span>Krithin Jay Pakshootra</span>
-            </h1>
-            <p className="desc">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Dignissimos, optio nisi quae dolore suscipit harum dicta beatae
-              amet possimus error laboriosam maxime quia corporis dolores.
-              Officiis odio ratione sequi aliquam? Lorem ipsum dolor sit amet
-              consectetur adipisicing elit. Maiores neque minima nostrum soluta
-              saepe tenetur ratione iure laudantium recusandae inventore quis
-              dolore perferendis fugit aut omnis adipisci facilis, voluptatem
-              quaerat.
-            </p>
-          </div>
-          <div className="right-side"></div>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="-11.5 -10.23174 23 20.46348"
+            className="react-svg-icon"
+          >
+            <circle cx="0" cy="0" r="2.05" fill="#61dafb" />
+            <g stroke="#61dafb" stroke-width="1" fill="none">
+              <ellipse rx="11" ry="4.2" id="#react-icon-path-1" />
+              <ellipse rx="11" ry="4.2" transform="rotate(60)" />
+              <ellipse rx="11" ry="4.2" transform="rotate(120)" />
+            </g>
+          </svg>
+          <p className="header">Hello world</p>
         </div>
         <div className="page page-2">
           <p className="header">About me</p>

@@ -1,11 +1,33 @@
-import React, { useEffect, useState, useRef } from "react";
+import React, { useEffect, useState, useRef, useLayoutEffect } from "react";
 import "./Navbar.css";
 import { Outlet } from "react-router";
 import { NavLink } from "react-router-dom";
 import { gsap } from "gsap";
 
 const Navbar = () => {
-    const nav = useRef(null)
+  const nav = useRef(null);
+
+  useLayoutEffect(() => {
+    const element = nav.current;
+
+    const ctx = gsap.context(() => {
+      gsap.fromTo(
+        element,
+        { backgroundColor: "transparent" },
+        {
+          backgroundColor: "#e6e1fb",
+          duration: 1,
+          scrollTrigger: {
+            trigger: document.querySelector(".body-wrapper .page-1"),
+            start: "20%",
+            end: "bottom 70%",
+          },
+        }
+      );
+    }, element);
+
+    return () => ctx.revert();
+  }, []);
 
   return (
     <>

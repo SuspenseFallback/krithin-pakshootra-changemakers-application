@@ -11,6 +11,7 @@ body {
   overflow-x: hidden;
 
   --app-theme-color: rgb(102, 22, 240);
+  background-color: #e6e1fb;
 }
 
 code {
@@ -20,5 +21,5 @@ code {
 
 .page {
   width: 100vw;
-  height: 90vh;
+  height: 100vh;
 }
