@@ -1,18 +1,22 @@
 .home-page .page-1 {
   padding: 1vw;
-  height: 200vh;
+  height: 90vh !important;
 
   display: flex;
   justify-content: center;
+  align-items: center;
 }
 
 .home-page .page-1 .header {
-  font-size: 5rem;
+  font-size: 3.5rem;
   font-weight: bold;
+  text-align: center;
 }
 
 .home-page .page-1 .header span {
   color: var(--app-theme-color);
+  display: block;
+  font-size: 2.3rem;
 }
 
 .home-page .page-1 .react-svg-icon {
@@ -21,22 +25,46 @@
 }
 
 .home-page .page-2 {
-  background-color: #d3ceed;
-
   display: flex;
-  flex-direction: row;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
+
+  height: 60vh !important;
 }
 
-.home-page .page-2 .header {
+.home-page .page-2 .reason-1 {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+
+  height: 90%;
+  width: 80%;
+}
+
+.home-page .page-2 .reason-1 .header {
   font-size: 4rem;
   font-weight: bold;
+  text-align: center;
+  border-width: 5px;
+  border-style: solid;
+  border-image-slice: 1;
+  border-image-source: linear-gradient(to left, #743ad5, #b33ad5);
+  padding: 3vw;
+}
 
-  margin: 0;
-  text-wrap: nowrap;
+.home-page .page-2 .reason-1 .text {
+  width: 40%;
+  height: 100%;
 
-  transform: rotate(-90deg);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.home-page .page-2 .reason-1 .text .title {
+  font-weight: bold;
+  font-size: 2rem;
 }
 
 .home-page .page-3 {
@@ -44,7 +72,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 400vh !important;
+  height: 90vh !important;
 }
 
 .home-page .page-3 .header {
@@ -53,6 +81,122 @@
 }
 
 .home-page .page-3 .cards {
+  height: 85%;
+  width: 100%;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-wrap: wrap;
+
+  margin-top: 10vh;
+}
+
+.home-page .page-3 .cards .card {
+  width: 30%;
+  height: 53vh;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.home-page .page-3 .cards .card img {
+  width: 100%;
+  height: auto;
+
+  border-radius: 4px;
+  border: 2px solid #000;
+}
+
+.home-page .page-3 .cards .card .title {
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+.home-page .page-3 .cards .card .desc {
+  width: 90%;
+  text-align: center;
+  color: rgb(61, 61, 61);
+  font-size: 15px;
+}
+
+.home-page .page-3 .cards .card .button {
+  padding: 12px;
+
+  border: 2px solid #000;
+  border-radius: 4px;
+
+  font-family: "Lexend";
+  font-size: 14px;
+
+  background-color: #d4c2ef;
+
+  cursor: pointer;
+  transition: all 0.5s;
+}
+
+.home-page .page-3 .cards .card .button:hover {
+  background-color: #cbb1f2;
+}
+
+.home-page .page-4 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  height: 70vh !important;
+}
+
+.home-page .page-4 .header {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.home-page .page-4 .certs {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+
+  align-items: center;
+  justify-content: space-around;
+
+  width: 90%;
+
+  margin-top: 5vh;
+}
+
+.home-page .page-4 .certs .card {
+  width: 30%;
+  height: 53vh;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.home-page .page-4 .certs .card a {
+  height: 60%;
+}
+
+.home-page .page-4 .certs .card img {
   height: 100%;
-  width: 85%;
+  width: auto;
+
+  border-radius: 4px;
+  border: 2px solid #000;
+}
+
+.home-page .page-4 .certs .card .title {
+  font-size: 1.5rem;
+  font-weight: 500;
+  text-align: center;
+}
+
+.home-page .page-4 .certs .card .desc {
+  width: 90%;
+  text-align: center;
+  color: rgb(61, 61, 61);
+  font-size: 15px;
 }

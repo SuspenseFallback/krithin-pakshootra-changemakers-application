@@ -1,0 +1,18 @@
+.about-page .page-2 {
+  background-color: #d3ceed;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.about-page .page-2 .header {
+  font-size: 4rem;
+  font-weight: bold;
+
+  margin: 0;
+  text-wrap: nowrap;
+
+  transform: rotate(-90deg);
+}
