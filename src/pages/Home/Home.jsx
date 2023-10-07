@@ -7,10 +7,11 @@ import greenstand from "../../assets/greenstand.png";
 import javascript from "../../assets/free-code-camp-js-certification.png";
 import html from "../../assets/free-code-camp-responsive-web-design.png";
 import praiseCard from "../../assets/praise-card.jpg";
+import excellence from "../../assets/dcis-excellence-certificate.pdf";
+import resilience from "../../assets/Integrity-Year8-KrithinPakshootra.pdf";
 
 const Home = () => {
   const home = useRef(null);
-
   useEffect(() => {
     document.title = "Home | Krithin Jay Pakshootra";
   }, []);
@@ -218,6 +219,203 @@ const Home = () => {
     return () => ctx.revert();
   }, []);
 
+  useLayoutEffect(() => {
+    const element = home.current;
+
+    const ctx = gsap.context(() => {
+      gsap.fromTo(
+        element.querySelectorAll(".page-7 .reason-3 > *"),
+        {
+          opacity: 0,
+          x: 20,
+        },
+        {
+          opacity: 1,
+          x: 0,
+          duration: 1.5,
+          stagger: 0.4,
+          scrollTrigger: {
+            trigger: element.querySelector(".page-7"),
+            start: "top 60%",
+            end: "bottom bottom",
+            toggleActions: "play none none reverse",
+          },
+        }
+      );
+    }, element);
+
+    return () => ctx.revert();
+  }, []);
+
+  useLayoutEffect(() => {
+    const element = home.current;
+
+    const ctx = gsap.context(() => {
+      gsap.fromTo(
+        element.querySelector(".page-8 .values .value.excellence"),
+        {
+          opacity: 0,
+          x: -200,
+        },
+        {
+          opacity: 1,
+          x: 0,
+          duration: 1,
+          scrollTrigger: {
+            trigger: element.querySelector(".page-8"),
+            start: "top 50%",
+            end: "bottom bottom",
+            toggleActions: "play none none reverse",
+          },
+        }
+      );
+
+      gsap.fromTo(
+        element.querySelector(".page-8 .values .value.creativity"),
+        {
+          opacity: 0,
+          x: 200,
+        },
+        {
+          opacity: 1,
+          x: 0,
+          duration: 1,
+          scrollTrigger: {
+            trigger: element.querySelector(".page-8"),
+            start: "top 50%",
+            end: "bottom bottom",
+            toggleActions: "play none none reverse",
+          },
+        }
+      );
+
+      gsap.fromTo(
+        element.querySelector(".page-8 .values .value.integrity"),
+        {
+          opacity: 0,
+          x: -200,
+        },
+        {
+          opacity: 1,
+          x: 0,
+          duration: 1,
+          scrollTrigger: {
+            trigger: element.querySelector(".page-8"),
+            start: "top 10%",
+            end: "bottom bottom",
+            toggleActions: "play none none reverse",
+          },
+        }
+      );
+
+      gsap.fromTo(
+        element.querySelector(".page-8 .values .value.resilience"),
+        {
+          opacity: 0,
+          x: 200,
+        },
+        {
+          opacity: 1,
+          x: 0,
+          duration: 1,
+          scrollTrigger: {
+            trigger: element.querySelector(".page-8"),
+            start: "top 10%",
+            end: "bottom bottom",
+            toggleActions: "play none none reverse",
+          },
+        }
+      );
+
+      gsap.fromTo(
+        element.querySelector(".page-8 .values .value.kindness"),
+        {
+          opacity: 0,
+          x: -200,
+        },
+        {
+          opacity: 1,
+          x: 0,
+          duration: 1,
+          scrollTrigger: {
+            trigger: element.querySelector(".page-8"),
+            start: "top -40%",
+            end: "bottom bottom",
+            toggleActions: "play none none reverse",
+          },
+        }
+      );
+
+      gsap.fromTo(
+        element.querySelector(".page-8 .values .value.diversity"),
+        {
+          opacity: 0,
+          x: 200,
+        },
+        {
+          opacity: 1,
+          x: 0,
+          duration: 1,
+          scrollTrigger: {
+            trigger: element.querySelector(".page-8"),
+            start: "top -40%",
+            end: "bottom bottom",
+            toggleActions: "play none none reverse",
+          },
+        }
+      );
+    }, element);
+
+    return () => ctx.revert();
+  }, []);
+
+  useLayoutEffect(() => {
+    const element = home.current;
+
+    const ctx = gsap.context(() => {
+      gsap.fromTo(
+        element.querySelector(".page-initiative .header"),
+        {
+          opacity: 0,
+          y: 20,
+        },
+        {
+          opacity: 1,
+          y: 0,
+          duration: 1.5,
+          scrollTrigger: {
+            trigger: element.querySelector(".page-initiative"),
+            start: "top 60%",
+            end: "bottom bottom",
+            toggleActions: "play none none reverse",
+          },
+        }
+      );
+
+      gsap.fromTo(
+        element.querySelectorAll(".page-initiative .content > div"),
+        {
+          opacity: 0,
+          y: -20,
+        },
+        {
+          opacity: 1,
+          y: 0,
+          duration: 1.5,
+          stagger: 0.2,
+          scrollTrigger: {
+            trigger: element.querySelector(".page-initiative"),
+            start: "top 40%",
+            end: "bottom bottom",
+            toggleActions: "play none none reverse",
+          },
+        }
+      );
+    }, element);
+
+    return () => ctx.revert();
+  }, []);
+
   return (
     <>
       <main className="home-page" ref={home}>
@@ -368,8 +566,6 @@ const Home = () => {
                     Hosted a workshop with live demoes of how to use MS Teams
                   </li>
                 </ul>
-                Armed with this experience, I can guarantee that I know what the
-                Digital and Learning committee's purpose is and how to lead it.
               </p>
             </div>
           </div>
@@ -384,6 +580,161 @@ const Home = () => {
               </p>
             </div>
             <img src={praiseCard} alt="Praise Card" className="img staggered" />
+          </div>
+        </div>
+        <div className="page page-initiative">
+          <p className="header">
+            What would I do as the lead of the Learning and Digital Committee?
+          </p>
+          <div className="content">
+            <div className="left">
+              <p className="title">
+                Example #1: Social Media for Student Perspective
+              </p>
+              <p className="desc">
+                We could open a social media account separate from the DCIS
+                official instagram and create posts from a student's
+                perspective. These would be from any student that sends an idea
+                to us, and would showcase any cool events or just the day-to-day
+                life of a student in Dover Court. It would be beneficial for the
+                school and it allows students to voice their opinions and events
+                on an account where everyone's safety and wellbeing is taken
+                into account.
+              </p>
+            </div>
+            <div className="right">
+              <p className="title">Example #2: Hackathon</p>
+              <p className="desc">
+                A week-long event where every form time, the students get to
+                learn Python and do programming tasks. They would be rewarded
+                with house points for certain milestones in finishing the
+                programming tasks. This would help introduce students to
+                programming in a world where tech-based industry is larger than
+                ever and might be one of the largest fields in the future.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div className="page page-7">
+          <div className="reason-3">
+            <p className="header">Reason #3</p>
+            <div className="text">
+              <p className="title">My Values</p>
+              <p className="desc">
+                I am a firm believer in our school values, which are:
+                <ul>
+                  <li>Excellence</li>
+                  <li>Creativity</li>
+                  <li>Integrity</li>
+                  <li>Resilience</li>
+                  <li>Kindness</li>
+                  <li>Diversity</li>
+                </ul>
+                and I aim to demonstrate these values in my day-to-day life.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div className="page page-8">
+          <div className="values">
+            <div className="row row-1">
+              <div className="value excellence">
+                <p className="title">Excellence</p>
+
+                <p className="desc">
+                  <i>the quality of being outstanding or extremely good.</i>
+                  <br />
+                  <br />A certificate I received from the school:
+                  <a
+                    href={excellence}
+                    download="krithin-pakshootra-excellence-certificate"
+                    className="download"
+                  >
+                    Download
+                  </a>
+                </p>
+              </div>
+              <div className="value creativity">
+                <p className="title">Creativity</p>
+                <p className="desc">
+                  <i>
+                    the use of imagination or original ideas to create
+                    something; inventiveness.
+                  </i>
+                  <br />
+                  <br />I use my creative skills to help me design engaging,
+                  colourful websites that attract user attention. They also help
+                  to create solutions to logical problems in a unique manner.
+                </p>
+              </div>
+            </div>
+            <div className="row row-2">
+              <div className="value integrity">
+                <p className="title">Integrity</p>
+                <p className="desc">
+                  <i>
+                    the quality of being honest and having strong moral
+                    principles.
+                  </i>
+                  <br />
+                  <br />
+                  An integral part of my life is maintaining a positive
+                  attitude. This helps me stay calm in stressful situations and
+                  overall have a better outlook on life that helps me improve in
+                  all areas.
+                </p>
+              </div>
+              <div className="value resilience">
+                <p className="title">Resilience</p>
+                <p className="desc">
+                  <i>
+                    the capacity to withstand or to recover quickly from
+                    difficulties; toughness.
+                  </i>
+                  <br />
+                  <br />
+                  Another certificate I received from the school:
+                  <a
+                    href={resilience}
+                    download="krithin-pakshootra-resilience-certificate"
+                    className="download"
+                  >
+                    Download
+                  </a>
+                </p>
+              </div>
+            </div>
+            <div className="row row-3">
+              <div className="value kindness">
+                <p className="title">Kindness</p>
+                <p className="desc">
+                  <i>
+                    the quality of being friendly, generous, and considerate.
+                  </i>
+                  <br />
+                  <br />
+                  After joining this school, the kindness that some people have
+                  showed me have inspired me to be a positive, kind person who
+                  cares about everyone's health and wellbeing.
+                </p>
+              </div>
+              <div className="value diversity">
+                <p className="title">Diversity</p>
+                <p className="desc">
+                  <i>
+                    the practice or quality of including or involving people
+                    from a range of different social and ethnic backgrounds and
+                    of different genders, sexual orientations, etc.
+                  </i>
+                  <br />
+                  <br />
+                  The very reason as to why I joined this school is because I
+                  wanted to be exposed to a diverse environment where I can meet
+                  and experience new cultures. I have always been proud of my
+                  culture, and accepting and curious about other's.
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </main>
