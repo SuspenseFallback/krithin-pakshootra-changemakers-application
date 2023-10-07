@@ -1,4 +1,4 @@
-import React, { useLayoutEffect, useRef } from "react";
+import React, { useLayoutEffect, useEffect, useRef } from "react";
 import "./Home.css";
 import gsap from "gsap";
 import flashcardApp from "../../assets/flashcard-app.png";
@@ -6,9 +6,14 @@ import businessGame from "../../assets/business-board.png";
 import greenstand from "../../assets/greenstand.png";
 import javascript from "../../assets/free-code-camp-js-certification.png";
 import html from "../../assets/free-code-camp-responsive-web-design.png";
+import praiseCard from "../../assets/praise-card.jpg";
 
 const Home = () => {
   const home = useRef(null);
+
+  useEffect(() => {
+    document.title = "Home | Krithin Jay Pakshootra";
+  }, []);
 
   useLayoutEffect(() => {
     const element = home.current;
@@ -50,11 +55,11 @@ const Home = () => {
         {
           opacity: 1,
           x: 0,
-          duration: 1.5,
+          duration: window.innerWidth > 1001 ? 1.5 : 2,
           stagger: 0.4,
           scrollTrigger: {
             trigger: element.querySelector(".page-2"),
-            start: "top 40%",
+            start: window.innerWidth > 1001 ? "top 40%" : "top 60%",
             end: "bottom bottom",
             toggleActions: "play none none reverse",
           },
@@ -113,6 +118,106 @@ const Home = () => {
     return () => ctx.revert();
   }, []);
 
+  useLayoutEffect(() => {
+    const element = home.current;
+
+    const ctx = gsap.context(() => {
+      gsap.fromTo(
+        element.querySelector(".page-4 .header"),
+        {
+          opacity: 0,
+        },
+        {
+          opacity: 1,
+          duration: 1.5,
+          scrollTrigger: {
+            trigger: element.querySelector(".page-4"),
+            start: "top 60%",
+            end: "bottom bottom",
+            toggleActions: "play none none reverse",
+          },
+        }
+      );
+
+      gsap.fromTo(
+        element.querySelector(".page-4 .certs"),
+        {
+          opacity: 0,
+          y: 50,
+        },
+        {
+          opacity: 1,
+          y: 0,
+          duration: 2,
+          scrollTrigger: {
+            trigger: element.querySelector(".page-4"),
+            start: "top 40%",
+            end: "bottom bottom",
+            toggleActions: "play none none reverse",
+          },
+        }
+      );
+    }, element);
+
+    return () => ctx.revert();
+  }, []);
+
+  useLayoutEffect(() => {
+    const element = home.current;
+
+    const ctx = gsap.context(() => {
+      gsap.fromTo(
+        element.querySelectorAll(".page-5 .reason-2 > *"),
+        {
+          opacity: 0,
+          x: 20,
+        },
+        {
+          opacity: 1,
+          x: 0,
+          duration: 1.5,
+          stagger: 0.4,
+          scrollTrigger: {
+            trigger: element.querySelector(".page-5"),
+            start: "top 60%",
+            end: "bottom bottom",
+            toggleActions: "play none none reverse",
+          },
+        }
+      );
+    }, element);
+
+    return () => ctx.revert();
+  }, []);
+
+  useLayoutEffect(() => {
+    const element = home.current;
+
+    const ctx = gsap.context(() => {
+      gsap.fromTo(
+        element.querySelectorAll(".page-6 .staggered"),
+        {
+          opacity: 0,
+          x: -30,
+        },
+        {
+          opacity: 1,
+          x: 0,
+          duration: 1.5,
+          stagger: 0.4,
+          scrollTrigger: {
+            trigger: element.querySelector(".page-6"),
+            start: "top 40%",
+            end: "bottom bottom",
+            toggleActions: "play none none reverse",
+          },
+        }
+      );
+    }, element);
+
+    return () => ctx.revert();
+  }, []);
+
   return (
     <>
       <main className="home-page" ref={home}>
@@ -126,7 +231,7 @@ const Home = () => {
           <div className="reason-1">
             <p className="header">Reason #1</p>
             <div className="text">
-              <p className="title">My experience</p>
+              <p className="title">My knowledge</p>
               <p className="desc">
                 I am very familiar with computing and multiple programming
                 languages, such as{" "}
@@ -162,7 +267,9 @@ const Home = () => {
           <p className="header">Some of my projects</p>
           <div className="cards">
             <div className="card">
-              <img src={flashcardApp} alt="Flashcard app" />
+              <a href={flashcardApp} target="_blank" rel="noreferrer">
+                <img src={flashcardApp} alt="Flashcard app" />
+              </a>
               <p className="title">Flashcards</p>
               <p className="desc">
                 An app I made which you can use to make and study flashcards for
@@ -173,7 +280,9 @@ const Home = () => {
               <button className="button">See more</button>
             </div>
             <div className="card">
-              <img src={businessGame} alt="Business Tic-Tac-Toe" />
+              <a href={businessGame} target="_blank" rel="noreferrer">
+                <img src={businessGame} alt="Business Tic-Tac-Toe" />
+              </a>
               <p className="title">Business Tic-Tac-Toe</p>
               <p className="desc">
                 What if you took tic-tac-toe (or noughts and crosses), but added
@@ -184,13 +293,19 @@ const Home = () => {
               <button className="button">See more</button>
             </div>
             <div className="card">
-              <img src={greenstand} alt="Greenstand" />
+              <a href={greenstand} target="_blank" rel="noreferrer">
+                <img src={greenstand} alt="Greenstand" />
+              </a>
               <p className="title">Greenstand</p>
               <p className="desc">
                 I didn't make this, but I volunteered for it! Here, I worked on
                 the admin panel and responsive wallet UI for the company. More
                 about Greenstand here:{" "}
-                <a href="https://greenstand.org/" target="_blank">
+                <a
+                  href="https://greenstand.org/"
+                  target="_blank"
+                  rel="noreferrer"
+                >
                   Greenstand
                 </a>
               </p>
@@ -202,7 +317,7 @@ const Home = () => {
           <p className="header">My certification for programming</p>
           <div className="certs">
             <div className="card">
-              <a href={javascript} target="_blank">
+              <a href={javascript} target="_blank" rel="noreferrer">
                 <img
                   src={javascript}
                   alt="Javascript algorithms and data structures"
@@ -218,7 +333,7 @@ const Home = () => {
               </a>
             </div>
             <div className="card">
-              <a href={html} target="_blank">
+              <a href={html} target="_blank" rel="noreferrer">
                 <img src={html} alt="Responsive web design" />
               </a>
               <p className="title">Responsive web design</p>
@@ -231,9 +346,45 @@ const Home = () => {
               </a>
             </div>
           </div>
+          <button className="button">View all</button>
         </div>
         <div className="page page-5">
-          <p className="header">Reason #2</p>
+          <div className="reason-2">
+            <p className="header">Reason #2</p>
+            <div className="text">
+              <p className="title">My experience</p>
+              <p className="desc">
+                I have already been a member of the learning and digital
+                committee last year (then called the Digital Culture and
+                Learning committee).
+                <br />
+                As a team, we:
+                <ul>
+                  <li>Helped set up Microsoft Teams for the school</li>
+                  <li>
+                    Made tutorial videos to teach students how to use MS Teams
+                  </li>
+                  <li>
+                    Hosted a workshop with live demoes of how to use MS Teams
+                  </li>
+                </ul>
+                Armed with this experience, I can guarantee that I know what the
+                Digital and Learning committee's purpose is and how to lead it.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div className="page page-6">
+          <div className="praise-card">
+            <div className="text staggered">
+              <p className="title staggered">Praise Card</p>
+              <p className="desc">
+                A praise card I received from SLT for helping in the Microsoft
+                Teams workshop
+              </p>
+            </div>
+            <img src={praiseCard} alt="Praise Card" className="img staggered" />
+          </div>
         </div>
       </main>
     </>

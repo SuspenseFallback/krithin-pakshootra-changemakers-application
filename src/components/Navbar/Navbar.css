@@ -12,6 +12,8 @@
   align-items: center;
 
   z-index: 100;
+
+  background-color: #ffffff85;
 }
 
 .navbar .logo {
@@ -34,6 +36,24 @@
   padding-right: 2vw;
 }
 
+.navbar .nav-items.md {
+  justify-content: flex-end;
+}
+
+.navbar .nav-items.md .nav-item {
+  padding: 16px;
+
+  cursor: pointer;
+}
+
+.navbar .nav-items.md .nav-item .icon {
+  transition: all 0.25s;
+}
+
+.navbar .nav-items.md .nav-item:hover .icon {
+  color: grey;
+}
+
 .navbar .nav-items .nav-item {
   padding: 8px;
 }
@@ -41,6 +61,10 @@
 .navbar .nav-items .nav-item .nav-link {
   color: #000;
   text-decoration: none;
+}
+
+.navbar .nav-items .nav-item .icon {
+  color: #000;
 }
 
 .hover-underline {
@@ -66,4 +90,55 @@
 
 .body-wrapper {
   margin-top: 10vh;
+}
+
+.sidebar {
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+
+  height: 100vh;
+  width: 40vw;
+
+  background-color: #fff;
+  box-shadow: 10px 10px 10px rgba(92, 87, 87, 0.5);
+
+  z-index: 500;
+  transition: all 0.5s;
+}
+
+.sidebar.hidden {
+  left: calc(-40vw - 20px);
+}
+
+.overlay {
+  background-color: #00000063;
+  z-index: 400;
+
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+
+  width: 100%;
+  height: 100%;
+
+  transition: all 0.5s;
+}
+
+.overlay.hidden {
+  background-color: transparent;
+  z-index: -1;
+}
+
+@media screen and (min-width: 1030px) {
+  .sidebar {
+    display: none;
+  }
+
+  .overlay {
+    background-color: transparent;
+  }
 }

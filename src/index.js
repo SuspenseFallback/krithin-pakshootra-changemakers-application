@@ -7,6 +7,7 @@ import { gsap } from "gsap";
 import { PixiPlugin } from "gsap/dist/PixiPlugin.js";
 import { MotionPathPlugin } from "gsap/dist/MotionPathPlugin.js";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger.js";
+import "primeicons/primeicons.css";
 
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Navbar from "./components/Navbar/Navbar";

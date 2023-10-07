@@ -1,3 +1,5 @@
+/* page 1 */
+
 .home-page .page-1 {
   padding: 1vw;
   height: 90vh !important;
@@ -23,6 +25,28 @@
   scale: 0.1;
   position: absolute;
 }
+
+/* page 1 media queries */
+
+@media screen and (max-width: 1369px) {
+  .home-page .page-1 .header {
+    font-size: 3rem;
+    width: 70vw;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .home-page .page-1 .header {
+    font-size: 2.5rem;
+    width: 70vw;
+  }
+
+  .home-page .page-1 .header span {
+    font-size: 1.5rem;
+  }
+}
+
+/* page 2 */
 
 .home-page .page-2 {
   display: flex;
@@ -67,12 +91,60 @@
   font-size: 2rem;
 }
 
+/* page 2 media queries */
+
+@media screen and (max-width: 1001px) {
+  .home-page .page-2 .reason-1 .header {
+    font-size: 3rem;
+  }
+
+  .home-page .page-2 .reason-1 .text .title {
+    font-weight: bold;
+    font-size: 1.5rem;
+  }
+}
+
+@media screen and (max-width: 810px) {
+  .home-page .page-2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    height: 80vh !important;
+  }
+
+  .home-page .page-2 .reason-1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+
+    height: 90%;
+    width: 80%;
+  }
+
+  .home-page .page-2 .reason-1 .text {
+    width: 70%;
+    height: 80%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+  }
+}
+
+/* page 3 */
+
 .home-page .page-3 {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   height: 90vh !important;
+  padding-right: 13px;
 }
 
 .home-page .page-3 .header {
@@ -90,6 +162,7 @@
   flex-wrap: wrap;
 
   margin-top: 10vh;
+  padding-right: 13px;
 }
 
 .home-page .page-3 .cards .card {
@@ -140,13 +213,78 @@
   background-color: #cbb1f2;
 }
 
+/* page 3 media queries */
+
+@media screen and (max-width: 1416px) {
+  .home-page .page-3 .cards .card {
+    width: 25%;
+    flex-basis: 25%;
+    height: 53vh;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+@media screen and (max-width: 1015px) {
+  .home-page .page-3 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 130vh !important;
+  }
+
+  .home-page .page-3 .cards {
+    height: 90%;
+    gap: 1vw;
+  }
+
+  .home-page .page-3 .cards .card {
+    width: 45%;
+    flex-basis: 45%;
+    height: 53vh;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+@media screen and (max-width: 747px) {
+  .home-page .page-3 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 210vh !important;
+  }
+
+  .home-page .page-3 .cards {
+    gap: 3vw;
+  }
+
+  .home-page .page-3 .cards .card {
+    width: 90%;
+    flex-basis: 90%;
+    height: 53vh;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+/* page 4 */
+
 .home-page .page-4 {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 
-  height: 70vh !important;
+  height: 82vh !important;
 }
 
 .home-page .page-4 .header {
@@ -164,7 +302,7 @@
 
   width: 90%;
 
-  margin-top: 5vh;
+  margin-top: 10vh;
 }
 
 .home-page .page-4 .certs .card {
@@ -199,4 +337,182 @@
   text-align: center;
   color: rgb(61, 61, 61);
   font-size: 15px;
+}
+
+.home-page .page-4 .button {
+  padding: 12px;
+
+  border: 2px solid #000;
+  border-radius: 4px;
+
+  font-family: "Lexend";
+  font-size: 14px;
+
+  background-color: #d4c2ef;
+
+  cursor: pointer;
+  transition: all 0.5s;
+}
+
+.home-page .page-4 .button:hover {
+  background-color: #cbb1f2;
+}
+
+/* page 4 media queries */
+
+@media screen and (max-width: 907px) {
+  .home-page .page-4 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    height: 132vh !important;
+  }
+
+  .home-page .page-4 .certs .card {
+    width: 90%;
+    flex-basis: 90%;
+    height: 53vh;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+/* page 5 */
+
+.home-page .page-5 {
+  height: 60vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-color: #c1b5f2;
+}
+
+.home-page .page-5 .reason-2 {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+
+  height: 90%;
+  width: 80%;
+}
+
+.home-page .page-5 .reason-2 .header {
+  font-size: 4rem;
+  font-weight: bold;
+  text-align: center;
+  border-width: 5px;
+  border-style: solid;
+  border-image-slice: 1;
+  border-image-source: linear-gradient(to left, #743ad5, #b33ad5);
+  padding: 3vw;
+}
+
+.home-page .page-5 .reason-2 .text {
+  width: 40%;
+  height: 100%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.home-page .page-5 .reason-2 .text .title {
+  font-weight: bold;
+  font-size: 2rem;
+}
+
+/* page 2 media queries */
+
+@media screen and (max-width: 1001px) {
+  .home-page .page-5 .reason-2 .header {
+    font-size: 3rem;
+  }
+
+  .home-page .page-5 .reason-2 .text .title {
+    font-weight: bold;
+    font-size: 1.5rem;
+  }
+}
+
+@media screen and (max-width: 810px) {
+  .home-page .page-5 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    height: 80vh !important;
+  }
+
+  .home-page .page-5 .reason-2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+
+    height: 90%;
+    width: 80%;
+  }
+
+  .home-page .page-5 .reason-2 .text {
+    width: 70%;
+    height: 80%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+  }
+}
+
+.home-page .page-6 {
+  height: 90vh;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+
+  background-color: #c1b5f2;
+}
+
+.home-page .page-6 .praise-card {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+
+  width: 80%;
+  height: 90%;
+}
+
+.home-page .page-6 .img {
+  width: 30vw;
+  height: auto;
+}
+
+.home-page .page-6 .text {
+  width: 40%;
+  height: 100%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.home-page .page-6 .text .title {
+  font-weight: bold;
+  font-size: 3rem;
+}
+
+.home-page .page-6 .text .desc {
+  font-size: 1.5rem;
 }
