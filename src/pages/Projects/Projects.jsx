@@ -1,4 +1,4 @@
-import React, { useLayoutEffect, useRef } from "react";
+import React, { useLayoutEffect, useRef, useEffect } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger.js";
 
@@ -16,9 +16,28 @@ import ukmt from "../../assets/ukmt-junior-gold.png";
 import greenstand_letter from "../../assets/Volunteer verification Letter Krithin Jay Pakshootra.pdf";
 
 import "./Projects.css";
+import { useLocation } from "react-router-dom";
 
 const Projects = () => {
+  const { hash } = useLocation();
+
   const ref = useRef(null);
+
+  useEffect(() => {
+    console.log("hash:", hash);
+
+    if (!hash) {
+      window.scrollTo(0, 0);
+    } else if (hash == "#flashcards") {
+      document.querySelector(".reason-1").scrollIntoView();
+    } else if (hash == "#business") {
+      document.querySelector(".reason-2").scrollIntoView();
+    } else if (hash == "#greenstand") {
+      document.querySelector(".reason-3").scrollIntoView();
+    } else if (hash == "#certs") {
+      document.querySelector(".page-3").scrollIntoView();
+    }
+  }, []);
 
   useLayoutEffect(() => {
     const element = ref.current;
@@ -172,142 +191,153 @@ const Projects = () => {
           <span className="icon pi pi-angle-down"></span>
         </div>
         <div className="page page-2">
-          <div className="left">
-            <div className="reason reason-1">
-              <div className="text">
-                <h1 className="header">
-                  Flashcards <span className="icon pi pi-external-link"></span>
-                </h1>
-                <p className="desc">
-                  An app I made which you can use to make and study flashcards
-                  for a variety of subjects. It has a search function,
-                  flashcards, dictation, learning and more! It is still in
-                  progress, but the working prototype is online.
-                </p>
+          {window.innerWidth > 909 ? (
+            <>
+              <div className="left">
+                <div className="reason reason-1" id="reason-1">
+                  <div className="text">
+                    <h1 className="header">
+                      Flashcards{" "}
+                      <span className="icon pi pi-external-link"></span>
+                    </h1>
+                    <p className="desc">
+                      An app I made which you can use to make and study
+                      flashcards for a variety of subjects. It has a search
+                      function, flashcards, dictation, learning and more! It is
+                      still in progress, but the working prototype is online.
+                    </p>
+                  </div>
+                </div>
+                <div className="reason reason-2" id="reason-2">
+                  <div className="text">
+                    <h1 className="header">
+                      Business Tic-Tac-Toe{" "}
+                      <span className="icon pi pi-external-link"></span>
+                    </h1>
+                    <p className="desc">
+                      What if you took tic-tac-toe (or noughts and crosses), but
+                      added business to it? This was one of our class projects
+                      for business. Every time you click a square, you have to
+                      answer a question to fill it in. Tic-Tac-Toe with a twist!
+                    </p>
+                  </div>
+                </div>
+                <div className="reason reason-3" id="reason-3">
+                  <div className="text">
+                    <h1 className="header">
+                      Greenstand{" "}
+                      <span className="icon pi pi-external-link"></span>
+                    </h1>
+                    <p className="desc">
+                      I didn't make this, but I volunteered for it! Here, I
+                      worked on the admin panel and responsive wallet UI for the
+                      company. I also have a certificate from them:{" "}
+                      <a
+                        href={greenstand_letter}
+                        download="krithin-pakshootra-greenstand-letter"
+                        className="download"
+                      >
+                        Download
+                      </a>
+                      . More about Greenstand here:{" "}
+                      <a
+                        href="https://greenstand.org/"
+                        target="_blank"
+                        rel="noreferrer"
+                      >
+                        Greenstand
+                      </a>
+                    </p>
+                  </div>
+                </div>
               </div>
-            </div>
-            <div className="reason reason-2">
-              <div className="text">
-                <h1 className="header">
-                  Business Tic-Tac-Toe{" "}
-                  <span className="icon pi pi-external-link"></span>
-                </h1>
-                <p className="desc">
-                  What if you took tic-tac-toe (or noughts and crosses), but
-                  added business to it? This was one of our class projects for
-                  business. Every time you click a square, you have to answer a
-                  question to fill it in. Tic-Tac-Toe with a twist!
-                </p>
+              <div className="right">
+                <div className="box">
+                  <div className="orange">
+                    <img src={flashcardApp} alt="Flashcards" className="img" />
+                  </div>
+                  <div className="white">
+                    <img
+                      src={businessGame}
+                      alt="Business Tic-Tac-Toe"
+                      className="img"
+                    />
+                  </div>
+                  <div className="green">
+                    <img src={greenstand} alt="Greenstand" className="img" />
+                  </div>
+                </div>
               </div>
-            </div>
-            <div className="reason reason-3">
-              <div className="text">
-                <h1 className="header">
-                  Greenstand <span className="icon pi pi-external-link"></span>
-                </h1>
-                <p className="desc">
-                  I didn't make this, but I volunteered for it! Here, I worked
-                  on the admin panel and responsive wallet UI for the company. I
-                  also have a certificate from them:{" "}
-                  <a
-                    href={greenstand_letter}
-                    download="krithin-pakshootra-greenstand-letter"
-                    className="download"
-                  >
-                    Download
-                  </a>
-                  . More about Greenstand here:{" "}
-                  <a
-                    href="https://greenstand.org/"
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    Greenstand
-                  </a>
-                </p>
-              </div>
-            </div>
-          </div>
-          <div className="right">
-            <div className="box">
-              <div className="orange">
+            </>
+          ) : (
+            <div className="mobile-content">
+              <div className="reason reason-1" id="reason-1">
                 <img src={flashcardApp} alt="Flashcards" className="img" />
+                <div className="text">
+                  <h1 className="header">
+                    Flashcards{" "}
+                    <span className="icon pi pi-external-link"></span>
+                  </h1>
+                  <p className="desc">
+                    An app I made which you can use to make and study flashcards
+                    for a variety of subjects. It has a search function,
+                    flashcards, dictation, learning and more! It is still in
+                    progress, but the working prototype is online.
+                  </p>
+                </div>
               </div>
-              <div className="white">
+              <div className="reason reason-2" id="reason-2">
                 <img
                   src={businessGame}
                   alt="Business Tic-Tac-Toe"
                   className="img"
                 />
+                <div className="text">
+                  <h1 className="header">
+                    Business Tic-Tac-Toe{" "}
+                    <span className="icon pi pi-external-link"></span>
+                  </h1>
+                  <p className="desc">
+                    What if you took tic-tac-toe (or noughts and crosses), but
+                    added business to it? This was one of our class projects for
+                    business. Every time you click a square, you have to answer
+                    a question to fill it in. Tic-Tac-Toe with a twist!
+                  </p>
+                </div>
               </div>
-              <div className="green">
+              <div className="reason reason-3" id="reason-3">
                 <img src={greenstand} alt="Greenstand" className="img" />
+                <div className="text">
+                  <h1 className="header">
+                    Greenstand{" "}
+                    <span className="icon pi pi-external-link"></span>
+                  </h1>
+                  <p className="desc">
+                    I didn't make this, but I volunteered for it! Here, I worked
+                    on the admin panel and responsive wallet UI for the company.
+                    I also have a certificate from them:{" "}
+                    <a
+                      href={greenstand_letter}
+                      download="krithin-pakshootra-greenstand-letter"
+                      className="download"
+                    >
+                      Download
+                    </a>
+                    More about Greenstand here:{" "}
+                    <a
+                      href="https://greenstand.org/"
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      Greenstand
+                    </a>
+                  </p>
+                </div>
               </div>
             </div>
-          </div>
-          <div className="mobile-content">
-            <div className="reason reason-1">
-              <img src={flashcardApp} alt="Flashcards" className="img" />
-              <div className="text">
-                <h1 className="header">
-                  Flashcards <span className="icon pi pi-external-link"></span>
-                </h1>
-                <p className="desc">
-                  An app I made which you can use to make and study flashcards
-                  for a variety of subjects. It has a search function,
-                  flashcards, dictation, learning and more! It is still in
-                  progress, but the working prototype is online.
-                </p>
-              </div>
-            </div>
-            <div className="reason reason-2">
-              <img
-                src={businessGame}
-                alt="Business Tic-Tac-Toe"
-                className="img"
-              />
-              <div className="text">
-                <h1 className="header">
-                  Business Tic-Tac-Toe{" "}
-                  <span className="icon pi pi-external-link"></span>
-                </h1>
-                <p className="desc">
-                  What if you took tic-tac-toe (or noughts and crosses), but
-                  added business to it? This was one of our class projects for
-                  business. Every time you click a square, you have to answer a
-                  question to fill it in. Tic-Tac-Toe with a twist!
-                </p>
-              </div>
-            </div>
-            <div className="reason reason-3">
-              <img src={greenstand} alt="Greenstand" className="img" />
-              <div className="text">
-                <h1 className="header">
-                  Greenstand <span className="icon pi pi-external-link"></span>
-                </h1>
-                <p className="desc">
-                  I didn't make this, but I volunteered for it! Here, I worked
-                  on the admin panel and responsive wallet UI for the company. I
-                  also have a certificate from them:{" "}
-                  <a
-                    href={greenstand_letter}
-                    download="krithin-pakshootra-greenstand-letter"
-                    className="download"
-                  >Download</a>
-                  More about Greenstand here:{" "}
-                  <a
-                    href="https://greenstand.org/"
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    Greenstand
-                  </a>
-                </p>
-              </div>
-            </div>
-          </div>
+          )}
         </div>
-        <div className="page page-3">
+        <div className="page page-3" id="certificates">
           <p className="header">My certifications</p>
 
           <div className="certs">

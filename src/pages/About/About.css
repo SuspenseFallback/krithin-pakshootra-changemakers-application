@@ -54,3 +54,9 @@
     flex-direction: column;
   }
 }
+
+@media screen and (max-width: 600px) {
+  .about-page .page-1 {
+    height: 120vh;
+  }
+}

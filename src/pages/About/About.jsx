@@ -1,7 +1,17 @@
 import React from "react";
 import "./About.css";
+import { useLocation } from "react-router-dom";
+import { useEffect } from "react";
 
 const About = () => {
+  const { hash } = useLocation();
+
+  useEffect(() => {
+    if (!hash) {
+      window.scrollTo(0, 0);
+    }
+  }, []);
+
   return (
     <>
       <div className="about-page">

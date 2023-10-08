@@ -9,11 +9,22 @@ import html from "../../assets/free-code-camp-responsive-web-design.png";
 import praiseCard from "../../assets/praise-card.jpg";
 import excellence from "../../assets/dcis-excellence-certificate.pdf";
 import resilience from "../../assets/Integrity-Year8-KrithinPakshootra.pdf";
+import { useNavigate } from "react-router";
+import { useLocation } from "react-router-dom";
 
 const Home = () => {
+  const { hash } = useLocation();
+  const navigate = useNavigate();
+
   const home = useRef(null);
   useEffect(() => {
     document.title = "Home | Krithin Jay Pakshootra";
+  }, []);
+
+  useEffect(() => {
+    if (!hash) {
+      window.scrollTo(0, 0);
+    }
   }, []);
 
   useLayoutEffect(() => {
@@ -416,6 +427,10 @@ const Home = () => {
     return () => ctx.revert();
   }, []);
 
+  const openLink = (link) => {
+    window.open(link, "_blank");
+  };
+
   return (
     <>
       <main className="home-page" ref={home}>
@@ -475,7 +490,12 @@ const Home = () => {
                 dictation, learning and more! It is still in progress, but a
                 working prototype can be found.
               </p>
-              <button className="button">See more</button>
+              <button
+                className="button"
+                onClick={() => openLink("/my-projects#flashcards")}
+              >
+                See more
+              </button>
             </div>
             <div className="card">
               <a href={businessGame} target="_blank" rel="noreferrer">
@@ -488,7 +508,12 @@ const Home = () => {
                 Every time you click a square, you have to answer a question to
                 fill it in. Tic-Tac-Toe with a twist!
               </p>
-              <button className="button">See more</button>
+              <button
+                className="button"
+                onClick={() => openLink("/my-projects#business")}
+              >
+                See more
+              </button>
             </div>
             <div className="card">
               <a href={greenstand} target="_blank" rel="noreferrer">
@@ -507,7 +532,12 @@ const Home = () => {
                   Greenstand
                 </a>
               </p>
-              <button className="button">See more</button>
+              <button
+                className="button"
+                onClick={() => openLink("/my-projects#greenstand")}
+              >
+                See more
+              </button>
             </div>
           </div>
         </div>
@@ -544,7 +574,12 @@ const Home = () => {
               </a>
             </div>
           </div>
-          <button className="button">View all</button>
+          <button
+            className="button"
+            onClick={() => openLink("/my-projects#certs")}
+          >
+            View all
+          </button>
         </div>
         <div className="page page-5">
           <div className="reason-2">

@@ -1,5 +1,14 @@
 @import url("https://fonts.googleapis.com/css2?family=Lexend:wght@100;200;300;400;500;600;700;800;900&family=Lexend:wght@300;400;500;600;700;800&family=Spectral&display=swap");
 
+html {
+  overflow-x: hidden;
+}
+
+
+#root {
+  overflow-x: hidden;
+}
+
 body {
   margin: 0;
   font-family: "Lexend", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto",
@@ -12,6 +21,8 @@ body {
 
   --app-theme-color: rgb(102, 22, 240);
   background-color: #e6e1fb;
+
+  overflow-x: hidden;
 }
 
 code {
