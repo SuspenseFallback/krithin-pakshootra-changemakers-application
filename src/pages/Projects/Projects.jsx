@@ -1,4 +1,4 @@
-import React, { useLayoutEffect, useEffect, useRef } from "react";
+import React, { useLayoutEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger.js";
 
@@ -293,7 +293,7 @@ const Projects = () => {
                     href={greenstand_letter}
                     download="krithin-pakshootra-greenstand-letter"
                     className="download"
-                  ></a>
+                  >Download</a>
                   More about Greenstand here:{" "}
                   <a
                     href="https://greenstand.org/"

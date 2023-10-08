@@ -1,8 +1,7 @@
-import React, { useEffect, useState, useRef, useLayoutEffect } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import "./Navbar.css";
 import { Outlet, useNavigate } from "react-router";
 import { NavLink } from "react-router-dom";
-import { gsap } from "gsap";
 import Footer from "../Footer/Footer";
 
 const Navbar = () => {
