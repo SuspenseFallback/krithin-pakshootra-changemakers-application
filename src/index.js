@@ -12,6 +12,8 @@ import "primeicons/primeicons.css";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Navbar from "./components/Navbar/Navbar";
 import Home from "./pages/Home/Home";
+import About from "./pages/About/About";
+import Projects from "./pages/Projects/Projects";
 
 gsap.registerPlugin(PixiPlugin, MotionPathPlugin, ScrollTrigger);
 
@@ -23,6 +25,14 @@ const router = createBrowserRouter([
       {
         path: "/",
         element: <Home />,
+      },
+      {
+        path: "/about",
+        element: <About />,
+      },
+      {
+        path: "/my-projects",
+        element: <Projects />,
       },
     ],
   },

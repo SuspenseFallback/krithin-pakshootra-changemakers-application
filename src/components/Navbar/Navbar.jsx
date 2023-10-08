@@ -42,12 +42,12 @@ const Navbar = () => {
                 </NavLink>
               </div>
               <div className="nav-item hover-underline">
-                <NavLink to="/" className="nav-link">
+                <NavLink to="/about" className="nav-link">
                   About me
                 </NavLink>
               </div>
               <div className="nav-item hover-underline">
-                <NavLink to="/" className="nav-link">
+                <NavLink to="/my-projects" className="nav-link">
                   My projects
                 </NavLink>
               </div>

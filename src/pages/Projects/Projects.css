@@ -1,0 +1,319 @@
+.projects-page .page-1 {
+  height: 90vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.projects-page .page-1 .header {
+  font-size: 4rem;
+  font-weight: bold;
+}
+
+.projects-page .page-1 .icon {
+  position: absolute;
+  bottom: 0;
+
+  margin-bottom: 24px;
+
+  font-size: 24px;
+
+  animation: scroll 2s infinite;
+}
+
+@keyframes scroll {
+  0% {
+    bottom: 0;
+  }
+
+  50% {
+    bottom: 12px;
+  }
+
+  100% {
+    bottom: 0;
+  }
+}
+
+/* ! page 2 */
+
+.projects-page .page-2 {
+  background-color: var(--app-primary-color);
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+  height: 300vh !important;
+}
+
+.button-row {
+  display: flex;
+  flex-direction: row;
+}
+
+.button-row .button {
+  margin: 8px;
+}
+
+.projects-page .page-2 .left {
+  width: 50%;
+  height: 100%;
+}
+
+.projects-page .page-2 .left .reason {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.projects-page .page-2 .left .reason .text {
+  width: 30%;
+  margin-left: 10vw;
+}
+
+.projects-page .page-2 .left .reason .text .header {
+  font-size: 3rem;
+  text-align: left;
+  cursor: pointer;
+}
+
+.projects-page .page-2 .left .reason .text .header .icon {
+  font-size: 2rem;
+}
+
+.projects-page .page-2 .left .reason .text .header:hover {
+  text-decoration: underline;
+}
+
+.projects-page .page-2 .left .reason .text .desc {
+  color: rgb(71, 71, 71);
+  margin-top: 3vh;
+}
+
+.projects-page .page-2 .left .reason-1 {
+  background-color: #f88f0dff;
+}
+
+.projects-page .page-2 .left .reason-2 {
+  background-color: #fff;
+}
+
+.projects-page .page-2 .left .reason-2 .text .header {
+  font-size: 2rem !important;
+}
+
+.projects-page .page-2 .left .reason-3 {
+  background-color: rgb(147, 208, 62);
+}
+
+/* ! right */
+
+.projects-page .page-2 .right {
+  width: 50%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.projects-page .page-2 .right .box {
+  width: 600px;
+  height: 325px;
+  position: relative;
+
+  overflow: hidden;
+}
+
+.projects-page .page-2 .right .box > div {
+  width: 600px;
+  height: 325px;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 0;
+}
+
+.projects-page .page-2 .right .box > div .img {
+  padding: 0;
+  margin: 0;
+
+  width: 596px;
+  height: 321px;
+
+  border: 2px solid #000;
+}
+
+/* ! mobile content */
+
+.projects-page .page-2 .mobile-content {
+  display: none;
+
+  width: 100vw;
+}
+
+.projects-page .page-2 .mobile-content .reason {
+  height: 100vh;
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.projects-page .page-2 .mobile-content .reason-1 {
+  background-color: #f88f0dff;
+}
+
+.projects-page .page-2 .mobile-content .reason-2 {
+  background-color: #fff;
+}
+
+.projects-page .page-2 .mobile-content .reason-3 {
+  background-color: rgb(147, 208, 62);
+}
+
+.projects-page .page-2 .mobile-content .reason .img {
+  width: 80vw;
+  height: auto;
+
+  border: 2px solid #000;
+}
+
+.projects-page .page-2 .mobile-content .reason .text {
+  text-align: center;
+  width: 80vw;
+}
+
+.projects-page .page-2 .mobile-content .reason .header {
+  text-align: center;
+  font-size: 2rem;
+}
+
+.projects-page .page-2 .mobile-content .reason .desc {
+  text-align: center;
+  margin-top: 5vh;
+}
+
+/* ? media queries */
+
+@media screen and (max-width: 1342px) {
+  .projects-page .page-2 .right .box {
+    width: 500px;
+    height: 271px;
+    position: relative;
+
+    overflow: hidden;
+  }
+
+  .projects-page .page-2 .right .box > div {
+    width: 500px;
+    height: 271px;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 0;
+  }
+
+  .projects-page .page-2 .right .box > div .img {
+    padding: 0;
+    margin: 0;
+
+    width: 496px;
+    height: 267px;
+
+    border: 2px solid #000;
+  }
+}
+
+@media screen and (max-width: 1166px) {
+  .projects-page .page-2 .right .box {
+    width: 400px;
+    height: 216px;
+    position: relative;
+
+    overflow: hidden;
+  }
+
+  .projects-page .page-2 .right .box > div {
+    width: 400px;
+    height: 216px;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 0;
+  }
+
+  .projects-page .page-2 .right .box > div .img {
+    padding: 0;
+    margin: 0;
+
+    width: 396px;
+    height: 212px;
+
+    border: 2px solid #000;
+  }
+
+  .projects-page .page-2 .left .reason .text .header {
+    font-size: 2rem;
+    text-align: left;
+    cursor: pointer;
+  }
+}
+
+@media screen and (max-width: 909px) {
+  .projects-page .page-2 .left {
+    display: none;
+  }
+
+  .projects-page .page-2 .right {
+    display: none;
+  }
+
+  .projects-page .page-2 .mobile-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+/* ! page 3 */
+
+.projects-page .page-3 {
+  height: 120vh;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #c8bdf3;
+}
+
+.projects-page .page-3 .header {
+  font-size: 3rem;
+  font-weight: bold;
+}
