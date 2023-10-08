@@ -5,7 +5,7 @@ const About = () => {
   return (
     <>
       <div className="about-page">
-        <div className="page page-2">
+        <div className="page page-1">
           <p className="header">About me</p>
           <p className="content">
             Hello! I am Krithin Jay Pakshootra, and I am a Year 9 student at

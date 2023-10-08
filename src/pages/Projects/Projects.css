@@ -334,6 +334,7 @@
 .projects-page .page-3 .certs .card {
   width: 30%;
   height: 50vh;
+  flex-basis: 30%;
 
   display: flex;
   flex-direction: column;
@@ -362,4 +363,73 @@
   text-align: center;
   color: rgb(61, 61, 61);
   font-size: 15px;
+}
+
+@media screen and (max-width: 1413px) {
+  .projects-page .page-3 {
+    height: 180vh;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #c8bdf3;
+  }
+
+  .projects-page .page-3 .certs .card {
+    width: 50%;
+    height: 50vh;
+    flex-basis: 50%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+@media screen and (max-width: 966px) {
+  .projects-page .page-3 {
+    height: 320vh;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #c8bdf3;
+  }
+
+  .projects-page .page-3 .certs .card {
+    width: 100%;
+    height: 50vh;
+    flex-basis: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .projects-page .page-1 .header {
+    font-size: 2rem;
+  }
+
+  .projects-page .page-3 .header {
+    font-size: 2rem;
+  }
+
+  .projects-page .page-3 .certs .card {
+    width: 80%;
+    height: 50vh;
+    flex-basis: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .projects-page .page-3 .certs .card img {
+    width: 80vw;
+    height: auto;
+
+    border: 2px solid #000;
+  }
 }

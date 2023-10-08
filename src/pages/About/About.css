@@ -1,4 +1,4 @@
-.about-page .page-2 {
+.about-page .page-1 {
   background-color: #d3ceed;
 
   display: flex;
@@ -7,18 +7,50 @@
   align-items: center;
 }
 
-.about-page .page-2 .header {
+.about-page .page-1 .header {
   font-size: 4rem;
   font-weight: bold;
 
-  margin: 0;
-  text-wrap: nowrap;
-
-  transform: rotate(-90deg);
+  width: 30%;
+  text-align: center;
 }
 
-.about-page .page-2 .content {
-  width: 70%;
+.about-page .page-1 .content {
+  width: 65%;
 
   font-size: 18px;
+  margin-right: 1vw;
+}
+
+@media screen and (max-width: 1372px) {
+  .about-page .page-1 .header {
+    font-size: 3rem;
+    font-weight: bold;
+
+    width: 30%;
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 1001px) {
+  .about-page .page-1 .header {
+    font-size: 2rem;
+    font-weight: bold;
+
+    width: 30%;
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 831px) {
+  .about-page .page-1 .content {
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 787px) {
+  .about-page .page-1 {
+    display: flex;
+    flex-direction: column;
+  }
 }

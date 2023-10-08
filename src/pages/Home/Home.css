@@ -860,3 +860,29 @@
     align-items: center;
   }
 }
+
+@media screen and (max-height: 715px) {
+  .home-page .page-2 {
+    height: 80vh !important;
+  }
+
+  .home-page .page-3 {
+    height: 100vh !important;
+  }
+
+  .home-page .page-4 {
+    height: 90vh !important;
+  }
+
+  .home-page .page-5 {
+    height: 80vh !important;
+  }
+
+  .home-page .page-initiative {
+    height: 100vh !important;
+  }
+
+  .home-page .page-7 {
+    height: 80vh !important;
+  }
+}
