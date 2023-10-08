@@ -6,8 +6,16 @@ import flashcardApp from "../../assets/flashcard-app.png";
 import businessGame from "../../assets/business-board.png";
 import greenstand from "../../assets/greenstand.png";
 
+import javascript from "../../assets/free-code-camp-js-certification.png";
+import html from "../../assets/free-code-camp-responsive-web-design.png";
+import excellence from "../../assets/krithin-pakshootra-excellence-cert.png";
+import resilience from "../../assets/krithin-pakshootra-resilience-certificate.png";
+import ict from "../../assets/krithin-pakshootra-ict-certificate.png";
+import ukmt from "../../assets/ukmt-junior-gold.png";
+
+import greenstand_letter from "../../assets/Volunteer verification Letter Krithin Jay Pakshootra.pdf";
+
 import "./Projects.css";
-import PdfViewerComponent from "../../components/PDF";
 
 const Projects = () => {
   const ref = useRef(null);
@@ -199,8 +207,16 @@ const Projects = () => {
                 </h1>
                 <p className="desc">
                   I didn't make this, but I volunteered for it! Here, I worked
-                  on the admin panel and responsive wallet UI for the company.
-                  More about Greenstand here:{" "}
+                  on the admin panel and responsive wallet UI for the company. I
+                  also have a certificate from them:{" "}
+                  <a
+                    href={greenstand_letter}
+                    download="krithin-pakshootra-greenstand-letter"
+                    className="download"
+                  >
+                    Download
+                  </a>
+                  . More about Greenstand here:{" "}
                   <a
                     href="https://greenstand.org/"
                     target="_blank"
@@ -271,7 +287,13 @@ const Projects = () => {
                 </h1>
                 <p className="desc">
                   I didn't make this, but I volunteered for it! Here, I worked
-                  on the admin panel and responsive wallet UI for the company.
+                  on the admin panel and responsive wallet UI for the company. I
+                  also have a certificate from them:{" "}
+                  <a
+                    href={greenstand_letter}
+                    download="krithin-pakshootra-greenstand-letter"
+                    className="download"
+                  ></a>
                   More about Greenstand here:{" "}
                   <a
                     href="https://greenstand.org/"
@@ -287,9 +309,90 @@ const Projects = () => {
         </div>
         <div className="page page-3">
           <p className="header">My certifications</p>
-          <PdfViewerComponent document={"dcis-excellence-certificate.pdf"} />
 
-          <div className="certs"></div>
+          <div className="certs">
+            <div className="card">
+              <a href={javascript} target="_blank" rel="noreferrer">
+                <img
+                  src={javascript}
+                  alt="Javascript algorithms and data structures"
+                />
+              </a>
+              <p className="title">Javascript algorithms and data structures</p>
+              <a
+                href={javascript}
+                download="krithin-pakshootra-freecodecamp-javascript-certification"
+                className="download"
+              >
+                Download
+              </a>
+            </div>
+            <div className="card">
+              <a href={html} target="_blank" rel="noreferrer">
+                <img src={html} alt="Responsive web design" />
+              </a>
+              <p className="title">Responsive web design</p>
+              <a
+                href={html}
+                download="krithin-pakshootra-freecodecamp-responsive-web-design-certification"
+                className="download"
+              >
+                Download
+              </a>
+            </div>
+            <div className="card">
+              <a href={excellence} target="_blank" rel="noreferrer">
+                <img src={excellence} alt="DCIS Excellence" />
+              </a>
+              <p className="title">DCIS Excellence</p>
+              <a
+                href={excellence}
+                download="krithin-pakshootra-dcis-excellence-certification"
+                className="download"
+              >
+                Download
+              </a>
+            </div>
+            <div className="card">
+              <a href={resilience} target="_blank" rel="noreferrer">
+                <img src={resilience} alt="DCIS Resilience" />
+              </a>
+              <p className="title">DCIS Resilience</p>
+              <a
+                href={resilience}
+                download="krithin-pakshootra-dcis-resilience-certification"
+                className="download"
+              >
+                Download
+              </a>
+            </div>
+            <div className="card">
+              <a href={ict} target="_blank" rel="noreferrer">
+                <img src={ict} alt="DCIS ICT Certificate" />
+              </a>
+              <p className="title">DCIS ICT Certificate</p>
+              <a
+                href={ict}
+                download="krithin-pakshootra-dcis-ict-certification"
+                className="download"
+              >
+                Download
+              </a>
+            </div>
+            <div className="card">
+              <a href={ukmt} target="_blank" rel="noreferrer">
+                <img src={ukmt} alt="UKMT JMC Gold" />
+              </a>
+              <p className="title">UKMT JMC Gold (logical thinking)</p>
+              <a
+                href={ukmt}
+                download="krithin-pakshootra-ukmt-junior-gold-certification"
+                className="download"
+              >
+                Download
+              </a>
+            </div>
+          </div>
         </div>
       </main>
     </>

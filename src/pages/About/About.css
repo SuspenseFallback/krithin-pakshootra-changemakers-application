@@ -16,3 +16,9 @@
 
   transform: rotate(-90deg);
 }
+
+.about-page .page-2 .content {
+  width: 70%;
+
+  font-size: 18px;
+}

@@ -637,103 +637,94 @@ const Home = () => {
         </div>
         <div className="page page-8">
           <div className="values">
-            <div className="row row-1">
-              <div className="value excellence">
-                <p className="title">Excellence</p>
+            <div className="value excellence">
+              <p className="title">Excellence</p>
 
-                <p className="desc">
-                  <i>the quality of being outstanding or extremely good.</i>
-                  <br />
-                  <br />A certificate I received from the school:
-                  <a
-                    href={excellence}
-                    download="krithin-pakshootra-excellence-certificate"
-                    className="download"
-                  >
-                    Download
-                  </a>
-                </p>
-              </div>
-              <div className="value creativity">
-                <p className="title">Creativity</p>
-                <p className="desc">
-                  <i>
-                    the use of imagination or original ideas to create
-                    something; inventiveness.
-                  </i>
-                  <br />
-                  <br />I use my creative skills to help me design engaging,
-                  colourful websites that attract user attention. They also help
-                  to create solutions to logical problems in a unique manner.
-                </p>
-              </div>
+              <p className="desc">
+                <i>the quality of being outstanding or extremely good.</i>
+                <br />
+                <br />A certificate I received from the school:
+                <a
+                  href={excellence}
+                  download="krithin-pakshootra-excellence-certificate"
+                  className="download"
+                >
+                  Download
+                </a>
+              </p>
             </div>
-            <div className="row row-2">
-              <div className="value integrity">
-                <p className="title">Integrity</p>
-                <p className="desc">
-                  <i>
-                    the quality of being honest and having strong moral
-                    principles.
-                  </i>
-                  <br />
-                  <br />
-                  An integral part of my life is maintaining a positive
-                  attitude. This helps me stay calm in stressful situations and
-                  overall have a better outlook on life that helps me improve in
-                  all areas.
-                </p>
-              </div>
-              <div className="value resilience">
-                <p className="title">Resilience</p>
-                <p className="desc">
-                  <i>
-                    the capacity to withstand or to recover quickly from
-                    difficulties; toughness.
-                  </i>
-                  <br />
-                  <br />
-                  Another certificate I received from the school:
-                  <a
-                    href={resilience}
-                    download="krithin-pakshootra-resilience-certificate"
-                    className="download"
-                  >
-                    Download
-                  </a>
-                </p>
-              </div>
+            <div className="value creativity">
+              <p className="title">Creativity</p>
+              <p className="desc">
+                <i>
+                  the use of imagination or original ideas to create something;
+                  inventiveness.
+                </i>
+                <br />
+                <br />I use my creative skills to help me design engaging,
+                colourful websites that attract user attention. They also help
+                to create solutions to logical problems in a unique manner.
+              </p>
             </div>
-            <div className="row row-3">
-              <div className="value kindness">
-                <p className="title">Kindness</p>
-                <p className="desc">
-                  <i>
-                    the quality of being friendly, generous, and considerate.
-                  </i>
-                  <br />
-                  <br />
-                  After joining this school, the kindness that some people have
-                  showed me have inspired me to be a positive, kind person who
-                  cares about everyone's health and wellbeing.
-                </p>
-              </div>
-              <div className="value diversity">
-                <p className="title">Diversity</p>
-                <p className="desc">
-                  <i>
-                    the practice or quality of including or involving people
-                    from a range of different social and ethnic backgrounds and
-                    of different genders, sexual orientations, etc.
-                  </i>
-                  <br />
-                  <br />
-                  The very reason as to why I joined this school is because I
-                  wanted to be exposed to a diverse environment where I can meet
-                  and experience new cultures. I have always been proud of my
-                  culture, and accepting and curious about other's.
-                </p>
-              </div>
+            <div className="value integrity">
+              <p className="title">Integrity</p>
+              <p className="desc">
+                <i>
+                  the quality of being honest and having strong moral
+                  principles.
+                </i>
+                <br />
+                <br />
+                An integral part of my life is maintaining a positive attitude.
+                This helps me stay calm in stressful situations and overall have
+                a better outlook on life that helps me improve in all areas.
+              </p>
+            </div>
+            <div className="value resilience">
+              <p className="title">Resilience</p>
+              <p className="desc">
+                <i>
+                  the capacity to withstand or to recover quickly from
+                  difficulties; toughness.
+                </i>
+                <br />
+                <br />
+                Another certificate I received from the school:
+                <a
+                  href={resilience}
+                  download="krithin-pakshootra-resilience-certificate"
+                  className="download"
+                >
+                  Download
+                </a>
+              </p>
+            </div>
+            <div className="value kindness">
+              <p className="title">Kindness</p>
+              <p className="desc">
+                <i>the quality of being friendly, generous, and considerate.</i>
+                <br />
+                <br />
+                After joining this school, the kindness that some people have
+                showed me have inspired me to be a positive, kind person who
+                cares about everyone's health and wellbeing.
+              </p>
+            </div>
+            <div className="value diversity">
+              <p className="title">Diversity</p>
+              <p className="desc">
+                <i>
+                  the practice or quality of including or involving people from
+                  a range of different social and ethnic backgrounds and of
+                  different genders, sexual orientations, etc.
+                </i>
+                <br />
+                <br />
+                The very reason as to why I joined this school is because I
+                wanted to be exposed to a diverse environment where I can meet
+                and experience new cultures. I have always been proud of my
+                culture, and accepting and curious about other's.
+              </p>
             </div>
           </div>
         </div>

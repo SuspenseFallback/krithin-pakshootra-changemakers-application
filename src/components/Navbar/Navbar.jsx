@@ -1,11 +1,13 @@
 import React, { useEffect, useState, useRef, useLayoutEffect } from "react";
 import "./Navbar.css";
-import { Outlet } from "react-router";
+import { Outlet, useNavigate } from "react-router";
 import { NavLink } from "react-router-dom";
 import { gsap } from "gsap";
 import Footer from "../Footer/Footer";
 
 const Navbar = () => {
+  const navigate = useNavigate();
+
   const [sidebar, set_sidebar] = useState(false);
   const [is_responsive, set_is_responsive] = useState(window.innerWidth < 1030);
 
@@ -13,7 +15,6 @@ const Navbar = () => {
 
   useEffect(() => {
     window.addEventListener("resize", () => {
-      console.log(window.innerWidth);
       if (window.innerWidth > 1030) {
         set_sidebar(false);
         set_is_responsive(false);
@@ -22,6 +23,11 @@ const Navbar = () => {
       }
     });
   }, []);
+
+  const goToLink = (link) => {
+    set_sidebar(false);
+    navigate(link);
+  };
 
   return (
     <>
@@ -61,7 +67,26 @@ const Navbar = () => {
         }
         onClick={() => set_sidebar(false)}
       ></div>
-      <div className={"sidebar " + (sidebar ? "" : "hidden")}></div>
+      <div className={"sidebar " + (sidebar ? "" : "hidden")}>
+        <div className="top">
+          <p className="title">Krithin Jay Pakshootra</p>
+          <span
+            className="icon pi pi-times"
+            onClick={() => set_sidebar(false)}
+          ></span>
+        </div>
+        <div className="items">
+          <div className="item" onClick={() => goToLink("/")}>
+            <p className="text">Home</p>
+          </div>
+          <div className="item" onClick={() => goToLink("/about")}>
+            <p className="text">About me</p>
+          </div>
+          <div className="item" onClick={() => goToLink("/my-projects")}>
+            <p className="text">My projects</p>
+          </div>
+        </div>
+      </div>
       <div className={"body-wrapper "}>
         <Outlet />
         <Footer />

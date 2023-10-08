@@ -317,3 +317,49 @@
   font-size: 3rem;
   font-weight: bold;
 }
+
+.projects-page .page-3 .certs {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+
+  align-items: center;
+  justify-content: space-around;
+
+  width: 90%;
+
+  margin-top: 10vh;
+}
+
+.projects-page .page-3 .certs .card {
+  width: 30%;
+  height: 50vh;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.projects-page .page-3 .certs .card a {
+  height: 60%;
+}
+
+.projects-page .page-3 .certs .card img {
+  height: 100%;
+  width: auto;
+
+  border: 2px solid #000;
+}
+
+.projects-page .page-3 .certs .card .title {
+  font-size: 1.5rem;
+  font-weight: 500;
+  text-align: center;
+}
+
+.projects-page .page-3 .certs .card .desc {
+  width: 90%;
+  text-align: center;
+  color: rgb(61, 61, 61);
+  font-size: 15px;
+}
