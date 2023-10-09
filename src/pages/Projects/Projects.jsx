@@ -28,13 +28,13 @@ const Projects = () => {
 
     if (!hash) {
       window.scrollTo(0, 0);
-    } else if (hash == "#flashcards") {
+    } else if (hash === "#flashcards") {
       document.querySelector(".reason-1").scrollIntoView();
-    } else if (hash == "#business") {
+    } else if (hash === "#business") {
       document.querySelector(".reason-2").scrollIntoView();
-    } else if (hash == "#greenstand") {
+    } else if (hash === "#greenstand") {
       document.querySelector(".reason-3").scrollIntoView();
-    } else if (hash == "#certs") {
+    } else if (hash === "#certs") {
       document.querySelector(".page-3").scrollIntoView();
     }
   }, []);
@@ -183,6 +183,10 @@ const Projects = () => {
     return () => ctx.revert();
   }, []);
 
+  const openLink = (link) => {
+    window.open(link, "_blank");
+  };
+
   return (
     <>
       <main className="projects-page" ref={ref}>
@@ -196,7 +200,12 @@ const Projects = () => {
               <div className="left">
                 <div className="reason reason-1" id="reason-1">
                   <div className="text">
-                    <h1 className="header">
+                    <h1
+                      className="header"
+                      onClick={() =>
+                        openLink("https://flashcard-app-green.vercel.app/")
+                      }
+                    >
                       Flashcards{" "}
                       <span className="icon pi pi-external-link"></span>
                     </h1>
@@ -210,7 +219,14 @@ const Projects = () => {
                 </div>
                 <div className="reason reason-2" id="reason-2">
                   <div className="text">
-                    <h1 className="header">
+                    <h1
+                      className="header"
+                      onClick={() =>
+                        openLink(
+                          "https://business-board-game-lemon.vercel.app/"
+                        )
+                      }
+                    >
                       Business Tic-Tac-Toe{" "}
                       <span className="icon pi pi-external-link"></span>
                     </h1>
@@ -224,7 +240,7 @@ const Projects = () => {
                 </div>
                 <div className="reason reason-3" id="reason-3">
                   <div className="text">
-                    <h1 className="header">
+                    <h1 className="header" onClick={() => openLink("https://www.greenstand.org")}>
                       Greenstand{" "}
                       <span className="icon pi pi-external-link"></span>
                     </h1>

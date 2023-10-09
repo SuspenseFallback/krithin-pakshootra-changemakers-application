@@ -17,31 +17,26 @@ import Projects from "./pages/Projects/Projects";
 
 gsap.registerPlugin(PixiPlugin, MotionPathPlugin, ScrollTrigger);
 
-const router = createBrowserRouter(
-  [
-    {
-      path: "/",
-      element: <Navbar />,
-      children: [
-        {
-          path: "/",
-          element: <Home />,
-        },
-        {
-          path: "/about",
-          element: <About />,
-        },
-        {
-          path: "/my-projects",
-          element: <Projects />,
-        },
-      ],
-    },
-  ],
+const router = createBrowserRouter([
   {
-    scrollRestoration: false,
-  }
-);
+    path: "/",
+    element: <Navbar />,
+    children: [
+      {
+        path: "/",
+        element: <Home />,
+      },
+      {
+        path: "/about",
+        element: <About />,
+      },
+      {
+        path: "/my-projects",
+        element: <Projects />,
+      },
+    ],
+  },
+]);
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
